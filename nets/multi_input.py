@@ -89,8 +89,8 @@ class MultiInputEyeStateNet(object):
         score = model.evaluate(X_test,y_test)
         self.model.model.save_weights(self.output+".h5")
         model_json = model.to_json()
-        with open("3.json", "w") as json_file:
+        with open("model2.json", "w") as json_file:
                 json_file.write(model_json)
 # serialize weights to HDF5
         #loaded_model = model_from_json(loaded_model_json)
-        print ("Score",score)
+        print "Score",score
